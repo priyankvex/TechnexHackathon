@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        xmlns:cardView="http://schemas.android.com/apk/res-auto"
+        cardView:cardBackgroundColor="#000000"
+        cardView:cardCornerRadius="5dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/cardPlace2"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/night_life2"
+                android:scaleType="centerCrop"
+                android:alpha="0.5"
+                android:id="@+id/imageViewVenue2"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clock Tower Restaurant"
+                android:textSize="7pt"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/textViewVenueName2"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="28dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="23dp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewAddress2"
+                android:textColor="@color/colorPrimary"
+                android:text="Address : Super Market"
+                android:textSize="5pt"
+                android:layout_centerVertical="true"
+                android:layout_alignLeft="@+id/textViewVenueName2"
+                android:layout_alignStart="@+id/textViewVenueName2"
+                android:layout_toLeftOf="@+id/textView4"
+                android:layout_toStartOf="@+id/textView4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewCategory2"
+                android:textColor="@color/colorPrimary"
+                android:text="Category : Café"
+                android:textSize="5pt"
+                android:layout_below="@+id/textViewAddress2"
+                android:layout_alignLeft="@+id/textViewAddress2"
+                android:layout_alignStart="@+id/textViewAddress2"
+                android:layout_marginTop="15dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewRating2"
+                android:textColor="#00B551"
+                android:text="9.2"
+                android:textSize="9pt"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="25dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check Ins"
+                android:textColor="@color/colorPrimary"
+                android:textSize="4pt"
+                android:layout_below="@+id/textViewRating2"
+                android:layout_alignRight="@+id/textViewRating2"
+                android:layout_alignEnd="@+id/textViewRating2"
+                android:id="@+id/textView4" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorBackgroundGrey"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    >
+
+    <android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+           <android.support.design.widget.AppBarLayout android:layout_height="wrap_content"
+               android:layout_width="match_parent" android:theme="@style/AppTheme.AppBarOverlay"
+               android:id="@+id/view">
+
+               <android.support.v7.widget.Toolbar android:id="@+id/toolbar"
+                   android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+                   android:background="?attr/colorPrimary" app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+           </android.support.design.widget.AppBarLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical"
+               android:layout_below="@+id/view"
+               android:padding="8dp"
+               android:layout_marginBottom="50dp"
+               >
+
+               <android.support.v7.widget.CardView
+                   android:id="@+id/cardLocation"
+                   android:layout_width="match_parent"
+                   android:layout_height="65dp"
+                   android:layout_marginTop="5dp"
+                   android:layout_marginLeft="5dp"
+                   android:layout_marginRight="5dp"
+                   app:cardElevation="8dp"
+                   android:layout_marginBottom="25dp"
+                   >
+
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent">
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Tap to select location"
+                           android:layout_centerVertical="true"
+                           android:layout_centerHorizontal="true"
+                           android:id="@+id/textViewLocation"
+                           />
+                       <ImageView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:src="@drawable/map_marker"
+                           android:layout_centerVertical="true"
+                           android:layout_alignParentLeft="true"
+                           android:layout_alignParentStart="true"
+                           android:layout_marginLeft="15dp"
+                           android:layout_marginStart="15dp"
+                           android:id="@+id/imageViewMarker"
+                           />
+                   </RelativeLayout>
+
+               </android.support.v7.widget.CardView>
+
+               <android.support.v7.widget.CardView
+                   android:layout_width="match_parent"
+                   android:layout_height="125dp"
+                   cardView:cardBackgroundColor="#000000"
+                   cardView:cardCornerRadius="5dp"
+                   cardView:cardElevation="8dp"
+                   android:layout_marginBottom="10dp"
+                   android:id="@+id/cardWeather"
+                   >
+
+                   <RelativeLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:id="@+id/layoutWeather"
+                       >
+
+                       <ImageView
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           android:src="@drawable/weather_background"
+                           android:scaleType="centerCrop"
+                           android:alpha="0.5"
+                           />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="NA\n"
+                           android:textSize="9pt"
+                           android:textColor="@color/colorPrimary"
+                           android:id="@+id/textViewMainWeather"
+                           android:gravity="center"
+                           android:layout_marginLeft="28dp"
+                           android:layout_marginStart="28dp"
+                           android:layout_below="@+id/imageViewWeather"
+                           android:layout_alignParentLeft="true"
+                           android:layout_alignParentStart="true" />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Min Temp : NA\nMax Temp : NA\nHumidity : NA\nWind Speed : NA\n"
+                           android:id="@+id/textViewWeatherDetails"
+                           android:textColor="@color/colorPrimary"
+                           android:textSize="5pt"
+                           android:layout_marginLeft="27dp"
+                           android:layout_marginStart="27dp"
+                           android:layout_above="@+id/imageView"
+                           android:layout_toRightOf="@+id/textViewMainWeather"
+                           android:layout_toEndOf="@+id/textViewMainWeather" />
+
+                       <ImageView
+                           android:layout_width="80dp"
+                           android:layout_height="30dp"
+                           android:src="@drawable/open_ewather_map_logo"
+                           android:layout_alignParentBottom="true"
+                           android:layout_alignParentRight="true"
+                           android:layout_alignParentEnd="true"
+                           android:layout_marginRight="5dp"
+                           android:id="@+id/imageView" />
+
+                       <ImageView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:src="@drawable/spinner"
+                           android:id="@+id/imageViewWeather"
+                           android:layout_alignTop="@+id/textViewWeatherDetails"
+                           android:layout_alignLeft="@+id/textViewMainWeather"
+                           android:layout_alignStart="@+id/textViewMainWeather" />
+
+                   </RelativeLayout>
+
+               </android.support.v7.widget.CardView>
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Nice clear weather to explore your surroundings."
+                   android:textColor="@color/colorPrimaryDark"
+                   android:textSize="5pt"
+                   android:gravity="center"
+                   android:layout_marginBottom="20dp"
+                   android:textStyle="bold"
+                   android:id="@+id/textViewMessage"
+                   />
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginBottom="15dp"
+                   >
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
+                       android:text="Powered By"
+                       android:textColor="@color/colorPrimaryDark"
+                       android:textSize="3pt"
+                       android:id="@+id/textView"
+                       android:layout_centerVertical="true"
+                       android:layout_alignParentLeft="true"
+                       android:layout_alignParentStart="true" />
+
+                   <ImageView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:src="@drawable/foursquare_logo"
+                       android:layout_alignParentTop="true"
+                       android:layout_toRightOf="@+id/textView"
+                       android:layout_toEndOf="@+id/textView"
+                       android:layout_marginLeft="8dp"
+                       />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="View More"
+                       android:textColor="#ffffff"
+                       android:background="@color/colorPrimaryDark"
+                       android:layout_centerVertical="true"
+                       android:layout_alignParentRight="true"
+                       android:layout_alignParentEnd="true"
+                       android:textSize="4pt"
+                       android:padding="4dp"
+                       android:id="@+id/textViewViewMore"
+                       />
+
+               </RelativeLayout>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Recommended Places For You"
+                   android:textSize="4pt"
+                   android:textColor="@color/colorAccent"
+                   android:layout_gravity="center"
+                   android:layout_marginBottom="3dp"
+                   />
+
+               <View
+                   android:layout_width="175dp"
+                   android:layout_height="0.7dp"
+                   android:background="@color/colorPrimaryDark"
+                   android:layout_marginBottom="25dp"
+                   android:layout_gravity="center_horizontal" />
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:id="@+id/layoutPlaces"
+                   android:visibility="gone"
+                   >
+
+                   <android.support.v7.widget.CardView
+                       android:layout_width="match_parent"
+                       android:layout_height="125dp"
+                       cardView:cardBackgroundColor="#000000"
+                       cardView:cardCornerRadius="5dp"
+                       android:layout_marginBottom="10dp"
+                       android:id="@+id/cardPlace1"
+                       android:visibility="gone"
+                       >
+
+                       <RelativeLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           >
+
+                           <ImageView
+                               android:layout_width="match_parent"
+                               android:layout_height="match_parent"
+                               android:src="@drawable/night_life1"
+                               android:scaleType="centerCrop"
+                               android:alpha="0.5"
+                               android:id="@+id/imageViewVenue1"
+                               />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Clock Tower Restaurant"
+                               android:textSize="7pt"
+                               android:textColor="@color/colorPrimary"
+                               android:id="@+id/textViewVenueName1"
+                               android:layout_alignParentTop="true"
+                               android:layout_alignParentLeft="true"
+                               android:layout_alignParentStart="true"
+                               android:layout_marginLeft="28dp"
+                               android:layout_marginStart="28dp"
+                               android:layout_marginTop="23dp"
+                               android:textStyle="bold"
+                               />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:id="@+id/textViewAddress1"
+                               android:textColor="@color/colorPrimary"
+                               android:text="Address : Super Market"
+                               android:textSize="5pt"
+                               android:layout_centerVertical="true"
+                               android:layout_alignLeft="@+id/textViewVenueName1"
+                               android:layout_alignStart="@+id/textViewVenueName1" />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:id="@+id/textViewCategory1"
+                               android:textColor="@color/colorPrimary"
+                               android:text="Category : Café"
+                               android:textSize="5pt"
+                               android:layout_below="@+id/textViewAddress1"
+                               android:layout_alignLeft="@+id/textViewAddress1"
+                               android:layout_alignStart="@+id/textViewAddress1"
+                               android:layout_marginTop="15dp"
+                               />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:id="@+id/textViewRating1"
+                               android:textColor="#00B551"
+                               android:text="23"
+                               android:textSize="9pt"
+                               android:textStyle="bold"
+                               android:layout_centerVertical="true"
+                               android:layout_alignParentRight="true"
+                               android:layout_alignParentEnd="true"
+                               android:layout_marginRight="25dp"
+                               />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Check Ins"
+                               android:textColor="@color/colorPrimary"
+                               android:textSize="4pt"
+                               android:layout_below="@+id/textViewRating1"
+                               android:layout_alignRight="@+id/textViewRating1"
+                               android:layout_alignEnd="@+id/textViewRating1" />
+
+                       </RelativeLayout>
+
+                   </android.support.v7.widget.CardView>
+
+                   <android.support.v7.widget.CardView
+                       android:layout_width="match_parent"
+                       android:layout_height="125dp"
+                       cardView:cardBackgroundColor="#000000"
+                       cardView:cardCornerRadius="5dp"
+                       android:layout_marginBottom="10dp"
+                       android:id="@+id/cardPlace2"
+                       android:visibility="gone"
+                       >
+
+                       <RelativeLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           >
+
+                           <ImageView
+                               android:layout_width="match_parent"
+                               android:layout_height="match_parent"
+                               android:src="@drawable/night_life2"
+                               android:scaleType="centerCrop"
+                               android:alpha="0.5"
+                               android:id="@+id/imageViewVenue2"
+                               />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Clock Tower Restaurant"
+                               android:textSize="7pt"
+                               android:textColor="@color/colorPrimary"
+                               android:id="@+id/textViewVenueName2"
+                               android:layout_alignParentTop="true"
+                               android:layout_alignParentLeft="true"
+                               android:layout_alignParentStart="true"
+                               android:layout_marginLeft="28dp"
+                               android:layout_marginStart="28dp"
+                               android:layout_marginTop="23dp"
+                               android:textStyle="bold"
+                               />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:id="@+id/textViewAddress2"
+                               android:textColor="@color/colorPrimary"
+                               android:text="Address : Super Market"
+                               android:textSize="5pt"
+                               android:layout_centerVertical="true"
+                               android:layout_alignLeft="@+id/textViewVenueName2"
+                               android:layout_alignStart="@+id/textViewVenueName2" />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:id="@+id/textViewCategory2"
+                               android:textColor="@color/colorPrimary"
+                               android:text="Category : Café"
+                               android:textSize="5pt"
+                               android:layout_below="@+id/textViewAddress2"
+                               android:layout_alignLeft="@+id/textViewAddress2"
+                               android:layout_alignStart="@+id/textViewAddress2"
+                               android:layout_marginTop="15dp"
+                               />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:id="@+id/textViewRating2"
+                               android:textColor="#00B551"
+                               android:text="82"
+                               android:textSize="9pt"
+                               android:textStyle="bold"
+                               android:layout_centerVertical="true"
+                               android:layout_alignParentRight="true"
+                               android:layout_alignParentEnd="true"
+                               android:layout_marginRight="25dp"
+                               />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Check Ins"
+                               android:textColor="@color/colorPrimary"
+                               android:textSize="4pt"
+                               android:layout_below="@+id/textViewRating2"
+                               android:layout_alignRight="@+id/textViewRating2"
+                               android:layout_alignEnd="@+id/textViewRating2" />
+
+                       </RelativeLayout>
+
+                   </android.support.v7.widget.CardView>
+
+                   <android.support.v7.widget.CardView
+                       android:layout_width="match_parent"
+                       android:layout_height="125dp"
+                       cardView:cardBackgroundColor="#000000"
+                       cardView:cardCornerRadius="5dp"
+                       android:layout_marginBottom="10dp"
+                       android:id="@+id/cardPlace3"
+                       android:visibility="gone"
+                       >
+
+                       <RelativeLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="match_parent"
+                           >
+
+                           <ImageView
+                               android:layout_width="match_parent"
+                               android:layout_height="match_parent"
+                               android:src="@drawable/night_life3"
+                               android:scaleType="centerCrop"
+                               android:alpha="0.5"
+                               android:id="@+id/imageViewVenue3"
+                               />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Clock Tower Restaurant"
+                               android:textSize="7pt"
+                               android:textColor="@color/colorPrimary"
+                               android:id="@+id/textViewVenueName3"
+                               android:layout_alignParentTop="true"
+                               android:layout_alignParentLeft="true"
+                               android:layout_alignParentStart="true"
+                               android:layout_marginLeft="28dp"
+                               android:layout_marginStart="28dp"
+                               android:layout_marginTop="23dp"
+                               android:textStyle="bold"
+                               />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:id="@+id/textViewAddress3"
+                               android:textColor="@color/colorPrimary"
+                               android:text="Address : Super Market"
+                               android:textSize="5pt"
+                               android:layout_centerVertical="true"
+                               android:layout_alignLeft="@+id/textViewVenueName3"
+                               android:layout_alignStart="@+id/textViewVenueName3" />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:id="@+id/textViewCategory3"
+                               android:textColor="@color/colorPrimary"
+                               android:text="Category : Café"
+                               android:textSize="5pt"
+                               android:layout_below="@+id/textViewAddress3"
+                               android:layout_alignLeft="@+id/textViewAddress3"
+                               android:layout_alignStart="@+id/textViewAddress3"
+                               android:layout_marginTop="15dp"
+                               />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:id="@+id/textViewRating3"
+                               android:textColor="#00B551"
+                               android:text="92"
+                               android:textSize="9pt"
+                               android:textStyle="bold"
+                               android:layout_centerVertical="true"
+                               android:layout_alignParentRight="true"
+                               android:layout_alignParentEnd="true"
+                               android:layout_marginRight="25dp"
+                               />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Checkins"
+                               android:textColor="@color/colorPrimary"
+                               android:textSize="4pt"
+                               android:layout_below="@+id/textViewRating3"
+                               android:layout_alignRight="@+id/textViewRating3"
+                               android:layout_alignEnd="@+id/textViewRating3" />
+
+                       </RelativeLayout>
+
+                   </android.support.v7.widget.CardView>
+
+               </LinearLayout>
+
+               <mehdi.sakout.fancybuttons.FancyButton
+                   android:id="@+id/buttonAuthFoursquare1"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:paddingBottom="10dp"
+                   android:paddingLeft="20dp"
+                   android:paddingRight="20dp"
+                   android:paddingTop="10dp"
+                   fancy:fb_borderColor="#268694"
+                   fancy:fb_borderWidth="1dp"
+                   fancy:fb_defaultColor="#3DC1C9"
+                   fancy:fb_focusColor="#268694"
+                   fancy:fb_fontIconResource="&#xf180;"
+                   fancy:fb_iconPosition="left"
+                   fancy:fb_radius="30dp"
+                   fancy:fb_text="Connect To Foursquare"
+                   fancy:fb_textColor="#FFFFFF"
+                   android:layout_gravity="center_horizontal"
+                   android:layout_marginTop="30dp"
+                   />
+
+           </LinearLayout>
+
+
+       </RelativeLayout>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</ScrollView>

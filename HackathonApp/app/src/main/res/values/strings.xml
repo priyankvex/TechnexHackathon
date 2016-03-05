@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Look Around</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_menu">Menu</string>
+    <string name="open_weather_api_key">17b323ac1b6dd635bbd96557172f3d12</string>
+    <string name="fsq_client_id">RGLCFCWJOGGRXF5RALXAEGSRJSVQCFUXLAU0Y0O5WHWRCQ2B</string>
+    <string name="fsq_client_secret">P5MOY4DRCWASAKU0FIW55MMTPOOBFA41SV2LMXCBKUZ4VIDD</string>
+    <string name="about_text">Look Around is an app to quickly take a look at one\'s surrounding.
+    Any outgoing plan starts with a look at weather. Take a look at the weather, powered by OpenWeatherMap.
+    Next, browse near by places and venues using the extensive data provided by Foursquare.</string>
+</resources>
